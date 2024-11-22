@@ -1,0 +1,15 @@
+[Unit]
+Description=Custom Startup Settings for Power Management
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'echo "RP03" > /proc/acpi/wakeup'
+ExecStart=/bin/bash -c 'echo "RP04" > /proc/acpi/wakeup'
+ExecStart=/bin/bash -c 'echo "RP05" > /proc/acpi/wakeup'
+ExecStart=/bin/bash -c 'echo "RP07" > /proc/acpi/wakeup'
+ExecStart=/bin/bash -c 'echo "70" > /sys/devices/system/cpu/cpufreq/ondemand/up_threshold'
+ExecStart=/bin/bash -c 'echo "15" > /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor'
+
+[Install]
+WantedBy=multi-user.target
