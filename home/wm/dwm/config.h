@@ -113,7 +113,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,                  spawn,          SHCMD("rofi -show drun") },                                 // open app launcher MOD+r
 	{ MODKEY,                       XK_Return,             spawn,          {.v = termcmd } },                                 // spawn terminal MOD+return
 	
-	{ MODKEY,                       XK_period,             spawn,          SHCMD("rofimoji") },                                 // spawn emoji selector
+	{ MODKEY,                       XK_period,             spawn,          SHCMD("rofimoji -a copy") },                                 // spawn emoji selector
 	{ MODKEY,                       XK_v,                  spawn,          SHCMD("copyq toggle") },                                 // spawn clipboard
 	
 	//Apps

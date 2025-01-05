@@ -88,7 +88,7 @@ const char *downspeed(const char *iface) {
     fclose(fp);
 
     rx_new = strtoull(buf, NULL, 10);
-    snprintf(buf, sizeof(buf), "%.2f MB/s", (rx_new - rx_old) / 1e6);
+    snprintf(buf, sizeof(buf), "%.2f MB/s", 10 * ((double)(rx_new - rx_old) / (1024.0 * 1024.0)));
     rx_old = rx_new;
 
     return buf;
