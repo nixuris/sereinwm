@@ -1,1 +1,6 @@
 confs/fish/fish_variables
+wm/dwm/drw.o
+wm/dwm/dwm
+wm/dwm/dwm.o
+wm/dwm/util.o
+wm/dwm/dwm.png
