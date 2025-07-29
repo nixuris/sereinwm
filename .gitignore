@@ -4,3 +4,13 @@ wm/dwm/dwm
 wm/dwm/dwm.o
 wm/dwm/util.o
 wm/dwm/dwm.png
+config/dwm/drw.o
+config/dwm/dwm
+config/dwm/dwm.o
+config/dwm/patchesaa.h
+config/dwm/config.h_old
+config/dwm/config.def.h_old
+config/dwm/util.o
+config/dwmblocks/dwmblocks.o
+config/dwmblocks/dwmblocks
+config/fish/fish_variables
