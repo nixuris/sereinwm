@@ -40,6 +40,6 @@ case ${chosen} in
 		swaylock	
         ;;
     $logout)
-		run_cmd --logout
+		pkill sereinwm
         ;;
 esac
