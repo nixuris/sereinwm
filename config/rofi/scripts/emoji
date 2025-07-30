@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
-sed '1,/^# # DATA # #$/d' $0 | 
-rofi -i -dmenu -config ~/.config/rofi/config-emoji.rasi| 
-cut -d ' ' -f 1 | tr -d '\n' | wl-copy
+# Pick clipboard backend
+if command -v xclip &>/dev/null; then
+  CLIP_CMD="xclip -selection clipboard"
+elif command -v xsel &>/dev/null; then
+  CLIP_CMD="xsel --clipboard --input"
+else
+  echo "Error: xclip or xsel required"
+  exit 1
+fi
+
+# Use rofi to pick emoji and copy it
+sed '1,/^# # DATA # #$/d' "$0" |
+  rofi -i -dmenu -config ~/.config/rofi/config-emoji.rasi |
+  cut -d ' ' -f1 | tr -d '\n' | $CLIP_CMD
 
 exit
 # # DATA # #
